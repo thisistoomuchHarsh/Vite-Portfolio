@@ -146,9 +146,14 @@
 
 @media (max-width: 425px) {
   .hero-section {
+    width: 100vw;
+    height: 100vh;
     flex-direction: column-reverse;
     gap: 20px;
-    height: auto;
+    background-image: url(../../assets/UserCharacter.png);
+    background-size: cover;
+    filter: grayscale();
+    background-repeat: no-repeat;
   }
 
   .hero-section::before {
