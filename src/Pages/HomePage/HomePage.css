@@ -147,17 +147,22 @@
 @media (max-width: 425px) {
   .hero-section {
     width: 100vw;
-    height: 100vh;
     flex-direction: column-reverse;
     gap: 20px;
-    background-image: url(../../assets/UserCharacter.png);
-    background-size: cover;
-    filter: grayscale();
-    background-repeat: no-repeat;
+    height: 100vh;
   }
 
   .hero-section::before {
-    display: none;
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../../assets/UserCharacter.png);
+    filter: grayscale(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    clip-path: none;
   }
 
   .hero-left {
