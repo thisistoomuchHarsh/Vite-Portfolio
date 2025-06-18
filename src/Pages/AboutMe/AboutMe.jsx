@@ -10,9 +10,12 @@ import githubIcon from "../../assets/github.svg"
 import SkillCard from "../../Components/SkillCard";
 import "./AboutMe.css";
 import EducationCard from "../../Components/EducationCard";
+import menuIcon from "../../assets/menu.svg"
+import closeIcon from "../../assets/close.svg"
 
 const AboutMe = () => {
   const [activeheading, setActiveheading] = useState("experience");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const headings = [
     { id: "experience", label: "Experience" },
@@ -70,7 +73,6 @@ const AboutMe = () => {
         </p>
         <div className="skills-grid">
           {skillIcons.map((skill, index) => (
-            // console.log(skill.title),
             <SkillCard key={index} icon={skill.icon} title={skill.title} />
           ))}
         </div>
@@ -115,11 +117,19 @@ const AboutMe = () => {
   };
   return (
     <div className="about-section">
-      <div className="about-left">
+      <div className="small-menu">
+        {!isMenuOpen ? (
+          <img src={menuIcon} alt="Menu Icon" className="menu-icon" onClick={()=> setIsMenuOpen(true)} />
+        ) : <img src={closeIcon} alt="Close Menu" className="close-icon" onClick={()=> setIsMenuOpen(false)} />
+        }
+      </div>
+      <div className={` about-left ${isMenuOpen ? "show-menu" : ""}`}>
         {headings.map((item) => (
           <button
             key={item.id}
-            onClick={() => setActiveheading(item.id)}
+            onClick={() => {setActiveheading(item.id);
+              setIsMenuOpen(false);
+            }}
             className={`menu-button ${
               activeheading === item.id ? "active" : ""
             }`}
