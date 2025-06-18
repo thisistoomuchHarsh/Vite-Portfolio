@@ -29,7 +29,7 @@
 }
 
 .active {
-  background-color: rgb(39 174 96);
+  background-color: #27ae60;
 }
 
 @media (max-width:768px) {
