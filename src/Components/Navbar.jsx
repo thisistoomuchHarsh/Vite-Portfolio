@@ -7,8 +7,11 @@ const Navbar = () => {
     <div className="navbar">
       <ul>
         <li>
+          <NavLink to="/"></NavLink>
+        </li>
+        <li>
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) =>
               isActive ? "nav-icon active" : "nav-icon"
             }
