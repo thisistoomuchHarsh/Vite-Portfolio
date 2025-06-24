@@ -1,7 +1,7 @@
 .hero-section {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100lvh;
   padding: 6rem;
   scroll-margin-top: 60px;
   border-bottom: 2px solid red;
@@ -33,7 +33,7 @@
 .hero-left img:hover {
   filter: grayscale(0);
   transition: 1s ease;
-  box-shadow: 4px 4px 10px #27ae60, -4px -4px 10px #1c1c22;
+  box-shadow: 4px 4px 10px #1c1c22, -4px -4px 10px #1c1c22;
 }
 
 .hero-right {
