@@ -1,26 +1,29 @@
+import "./Contact.css";
 import React from "react";
+
 import phoneIcon from "../../assets/phone.svg";
 import emailIcon from "../../assets/email.svg";
 import addressIcon from "../../assets/address.svg";
-import "./Contact.css";
+
+
 
 const Contact = () => {
   return (
-    <div className="contact-section">
+    <section id="contact" className="contact-section">
       <div className="contact-left">
         <div className="contact-container">
           <h3>Let's Work Together</h3>
           <p>Reach out to me for collaborations or inquiries.</p>
           <form action="https://formspree.io/f/mblykeak" method="POST" className="contact-form">
             <div className="input-row">
-              <input type="text" placeholder="First Name" required />
-              <input type="text" placeholder="Last Name" required/>
+              <input type="text" name="firstname" placeholder="First Name" required autoComplete="given-name" />
+              <input type="text" name="lastname" placeholder="Last Name" required autoComplete="family-name"/>
             </div>
             <div className="input-row">
-              <input type="email" placeholder="Email" required />
-              <input type="text" placeholder="Phone Number" required />
+              <input type="email" name="email" placeholder="Email" required autoComplete="email" />
+              <input type="text" name="phone" placeholder="Phone Number" required autoComplete="phone"/>
             </div>
-            <textarea placeholder="Type your message here" rows="5" required />
+            <textarea name="message" placeholder="Type your message here" rows="5" required autoComplete="off" />
             <button type="submit">Send Message</button>
           </form>
         </div>
@@ -54,7 +57,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

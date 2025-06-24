@@ -1,52 +1,17 @@
-import React, { useState } from "react";
-import htmlIcon from "../../assets/html.svg"
-import cssIcon from "../../assets/css.svg"
-import jsIcon from "../../assets/javascript.svg"
-import reactIcon from "../../assets/react.svg"
-import nodeIcon from "../../assets/node.svg"
-import bootstrapIcon from "../../assets/bootstrap.svg"
-import tailwindIcon from "../../assets/tailwind.svg"
-import githubIcon from "../../assets/github.svg"
-import SkillCard from "../../Components/SkillCard";
 import "./AboutMe.css";
-import EducationCard from "../../Components/EducationCard";
-import menuIcon from "../../assets/menu.svg"
-import closeIcon from "../../assets/close.svg"
+import React, { useState } from "react";
+
+
+
+
 
 const AboutMe = () => {
   const [activeheading, setActiveheading] = useState("experience");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const headings = [
     { id: "experience", label: "Experience" },
-    { id: "skills", label: "Skills" },
     { id: "education", label: "Education" },
     { id: "about", label: "About Me" },
-  ];
-
-  const skillIcons = [
-    { icon: htmlIcon, title: "HTML5" },
-    { icon: cssIcon, title: "CSS3" },
-    { icon: jsIcon, title: "JavaScript" },
-    { icon: reactIcon, title: "React" },
-    { icon: nodeIcon, title: "Node" },
-    { icon: bootstrapIcon, title: "Bootstrap" },
-    { icon: tailwindIcon, title: "Tailwind" },
-    { icon: githubIcon, title: "Github" },
-  ];
-
-  const educationCardInfo = [
-    {
-      duration: "2020 - 2024",
-      education: "Bachelor of Commerce",
-      institution: "Delhi University",
-    },
-    {
-      duration: "2024 - 2025",
-      education: "Frontend Developer Course",
-      institution: "Dice Academy",
-    },
-    
   ];
 
   const content = {
@@ -71,11 +36,6 @@ const AboutMe = () => {
           front-end technologies enables me to build seamless, interactive web
           experiences that align with both user needs and business goals.
         </p>
-        <div className="skills-grid">
-          {skillIcons.map((skill, index) => (
-            <SkillCard key={index} icon={skill.icon} title={skill.title} />
-          ))}
-        </div>
         
       </div>
     ),
@@ -89,16 +49,6 @@ const AboutMe = () => {
           experience in building responsive and user-friendly web interfaces
           using modern tools and frameworks.
         </p>
-        <div className="education-grid">
-          {educationCardInfo.map((education, index) => (
-            <EducationCard
-              key={index}
-              duration={education.duration}
-              education={education.education}
-              institution={education.institution}
-            />
-          ))}
-        </div>
       </div>
     ),
     about: (
@@ -116,14 +66,8 @@ const AboutMe = () => {
     ),
   };
   return (
-    <div className="about-section">
-      <div className="small-menu">
-        {!isMenuOpen ? (
-          <img src={menuIcon} alt="Menu Icon" className="menu-icon" onClick={()=> setIsMenuOpen(true)} />
-        ) : <img src={closeIcon} alt="Close Menu" className="close-icon" onClick={()=> setIsMenuOpen(false)} />
-        }
-      </div>
-      <div className={` about-left ${isMenuOpen ? "show-menu" : ""}`}>
+    <section id="about" className="about-section">
+      <div className="about-left">
         {headings.map((item) => (
           <button
             key={item.id}
@@ -142,7 +86,7 @@ const AboutMe = () => {
       <h2>{headings.find(h => h.id === activeheading)?.label}</h2>
       {content[activeheading]}
       </div>
-    </div>
+    </section>
   );
 };
 

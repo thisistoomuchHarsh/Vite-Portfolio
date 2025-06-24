@@ -4,11 +4,21 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body{
-  background-color: #1c1c22;
+  /* background-color: #1c1c22;
+   */
+   background-color: black;
   font-family: Roboto;
   color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }

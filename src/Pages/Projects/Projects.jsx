@@ -1,9 +1,11 @@
-import React from 'react'
 import './Projects.css'
+import React from 'react'
+
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+
+    <section id='projects' className='projects-section'>Projects</section>
   )
 }
 

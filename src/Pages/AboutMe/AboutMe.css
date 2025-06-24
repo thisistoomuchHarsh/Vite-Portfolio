@@ -1,36 +1,27 @@
 .about-section {
   display: flex;
   flex-direction: row;
-  padding: 5rem 10rem;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
   min-height: 100vh;
-  gap: 4rem;
-}
+  scroll-margin-top: 60px;
+  border-bottom: 2px solid red;
 
-.small-menu {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-}
-
-.menu-icon,
-.close-icon {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  filter: brightness(0) invert(1);
 }
 
 .about-left {
-  width: 35%;
+  width: 40%;
+  height: 100%;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 30px;
 }
 
 .menu-button {
-  width: 100%;
+  width: 50%;
   background-color: #27272c;
   color: #ffffff;
   border: none;
@@ -42,7 +33,7 @@
   transition: all 0.3s ease;
   text-align: center;
   font-family: "Baloo Bhai 2";
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -56,8 +47,12 @@
 }
 
 .about-right {
-  width: 65%;
-  padding-right: 3rem;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
 }
 
 .about-right h2 {
