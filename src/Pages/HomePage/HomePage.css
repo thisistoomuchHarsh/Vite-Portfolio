@@ -1,47 +1,35 @@
 .hero-section {
   display: flex;
   align-items: center;
-  min-height: 100lvh;
-  padding: 6rem;
+  justify-content: center;
+  flex-direction: row-reverse;
+  min-height: calc(100lvh - 71px);
+  padding: 2rem;
   scroll-margin-top: 60px;
-  border-bottom: 2px solid red;
-  border-top: 2px solid red;
 }
 
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .hero-left {
+  width: 50%;
   z-index: 2;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 50%;
-  /* height: 100vh; */
+  justify-content: center;
 }
 
 .hero-left img {
   width: 70%;
-  height: 80%;
-  border-radius: 30px;
-  filter: grayscale(100%);
-}
-
-.hero-left img:hover {
-  filter: grayscale(0);
-  transition: 1s ease;
-  box-shadow: 4px 4px 10px #1c1c22, -4px -4px 10px #1c1c22;
+  border-radius: 50%;
+  border: 5px solid #FFD700;
 }
 
 .hero-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
   width: 50%;
+  display: flex;
+  padding-left: 8rem;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
 }
 
 .hero-right h3 {
@@ -53,13 +41,14 @@
 }
 
 .hero-right .username {
-  color: #27ae60;
+  color: #FFD700;
   font-family: Prata;
 }
 
+
 .hero-right p {
-  /* padding-right: 16rem; */
   line-height: 1.6;
+  font-weight: 500;
 }
 
 .toggles {
@@ -71,37 +60,36 @@
 .toggles .resume {
   padding: 7px 20px;
   background-color: transparent;
-  color: white;
-  border: 1px solid #27ae60;
+  border: 1px solid #FFD700;
   border-radius: 30px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1.5px;
-  color: #27ae60;
+  color: #FFD700;
   font-family: "Baloo Bhai 2";
 }
 
 .toggles .resume:hover {
-  background-color: #27ae60;
-  color: rgb(28 28 34);
-  transition: 1s ease;
+  background-color: #FFD700;
+  color: #444343;
+  transition: 1s ease-in-out;
 }
 
 .toggles .socials {
   padding: 10px 12px;
   border-radius: 50%;
-  border: 1px solid #27ae60;
-  color: #27ae60;
+  border: 1px solid #FFD700;
+  color: #FFD700;
   background-color: transparent;
   text-align: center;
 }
 
 .toggles .socials:hover {
-  background-color: #27ae60;
-  color: rgb(28 28 34);
+  background-color: #FFD700;
+  color: #444343;
   cursor: pointer;
-  transition: 1s ease;
+  transition: 1s ease-in-out;
 }
 
 .toggles .socials i {
@@ -109,17 +97,13 @@
 }
 
 @media (max-width: 1024px) {
-  .hero-right {
-    padding-right: 4rem;
-  }
+  
 
   .hero-right h1 {
     font-size: 2.5rem;
-    padding-right: 0;
   }
 
   .hero-right p {
-    padding-right: 3rem;
     font-size: 1rem;
   }
 }
@@ -135,13 +119,13 @@
     width: 100%;
   }
 
-  .hero-right {
-    padding-right: 2rem;
+  .hero-right{
+    padding: 0;
   }
+
 
   .hero-right h1 {
     font-size: 2rem;
-    padding: 0;
   }
 
   .hero-right h3 {
@@ -176,7 +160,6 @@
     padding-bottom: 4rem;
     justify-content: center;
     align-items: center;
-    padding-right: 0;
   }
 
   .hero-right p {

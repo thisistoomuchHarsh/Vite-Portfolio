@@ -1,38 +1,26 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-
   position: sticky;
-  top: 20px;
+  top: 0;
   z-index: 1000;
-
-  padding: 1.2rem 4rem;
-  margin: 0 auto;
-  max-width: 90%;
-  border-radius: 40px;
-
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  /* box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1); */
 }
 
-
-.nav-left h2{
-  font-family: prata;
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
+.nav-left h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
 }
 
-.nav-right{
+.nav-right {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-right ul{
+.nav-right ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -40,25 +28,22 @@
   gap: 30px;
 }
 
-.nav-right ul li{
-  font-size: 1.3rem;
+.nav-right ul li {
+  font-size: 1rem;
   list-style-type: none;
   cursor: pointer;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.2px;
 }
 
-.nav-right ul li a{
+.nav-right ul li a {
   text-decoration: none;
-  color: white;
+  color: #999999;
+  font-weight: 550;
 }
 
-.nav-right ul li a:hover{
-  font-size: 1.3rem;
-  list-style-type: none;
-  cursor: pointer;
-  color: #27ae60;
+.nav-right ul li a:hover {
+  color: #444343;
 }
-/* ... keep your existing styles ... */
 
 .hamburger {
   display: none;
@@ -71,7 +56,7 @@
 .hamburger div {
   width: 25px;
   height: 3px;
-  background: white;
+  background: #444343;
   border-radius: 2px;
 }
 
@@ -79,7 +64,7 @@
 @media (max-width: 768px) {
   .nav-right ul {
     position: absolute;
-    top: 80px;
+    top: 10px;
     right: 10px;
     flex-direction: column;
     gap: 20px;
@@ -89,44 +74,47 @@
     border-radius: 15px;
     display: none;
   }
-  
+
   .nav-right ul.active {
     display: flex;
   }
-  
+
   .hamburger {
     display: flex;
   }
-  
+
   .nav-right ul li {
-    color: black;
+    color: #fff;
     text-align: right;
   }
 }
 
 @media (max-width: 425px) {
-  .nav-left h2{
+  .nav-left h2 {
     font-size: 1rem;
   }
 
-  .navbar{
-  padding: 1.2rem 2rem;
+  .nav-right ul {
+    top: 50px;
+    right: 20px;
   }
-  
+
+  .navbar {
+    padding: 1.2rem 2rem;
+  }
+
   .nav-right ul li {
     font-size: 16px;
   }
 }
 
-@media (max-width:375px) {
-  .nav-left h2{
+@media (max-width: 375px) {
+  .nav-left h2 {
     font-size: 0.8rem;
   }
 
-  
-.hamburger div {
-  width: 20px;
-  height: 2px;
+  .hamburger div {
+    width: 20px;
+    height: 2px;
+  }
 }
-}
-
