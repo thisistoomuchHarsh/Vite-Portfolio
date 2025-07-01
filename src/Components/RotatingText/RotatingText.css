@@ -18,8 +18,8 @@
   }
 
   .rotating-text-wrapper {
-    background-color: #FFD700;
-    color: #444343;
+    background-color: rgb(126 1 236);
+    color: #fff;
     padding: 5px 10px;
     display: inline-flex;
     justify-content: center;

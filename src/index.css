@@ -13,7 +13,17 @@ html {
 
 body {
   font-family: Roboto;
-  color: #444343;
+  position: relative;
+  background: url(../src/assets/KeyboardDark.jpg) center/cover no-repeat;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 0;
 }
 
 body::-webkit-scrollbar {

@@ -3,7 +3,6 @@ import BlurText from "../BlurText/BlurText";
 import AnimatedContent from "../AnimatedContent/AnimatedContent";
 
 const WelcomeScreen = ({ onExplore }) => {
-
   return (
     <div className="welcome-screen">
       <h2>

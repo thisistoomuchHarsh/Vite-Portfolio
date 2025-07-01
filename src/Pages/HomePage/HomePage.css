@@ -146,6 +146,7 @@
 @media (max-width: 425px) {
   .hero-section {
     flex-direction: column;
+    gap: 50px;
   }
 
   .hero-section::before {
