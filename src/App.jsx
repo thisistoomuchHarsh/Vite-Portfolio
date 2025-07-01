@@ -1,5 +1,11 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import PageWrapper from "./Components/PageWrapper/PageWrapper";
 import WelcomeScreen from "./Components/WelcomeScreen/WelcomeScreen";
@@ -9,6 +15,57 @@ import AboutMe from "./Pages/AboutMe/AboutMe";
 import Contact from "./Pages/Contact/Contact";
 import Projects from "./Pages/Projects/Projects";
 import HeroSection from "./Pages/HeroSection/HeroSection";
+
+const AppRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <PageWrapper>
+              <HeroSection />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <PageWrapper>
+              <AboutMe />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <PageWrapper>
+              <Projects />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/skills"
+          element={
+            <PageWrapper>
+              <Skills />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageWrapper>
+              <Contact />
+            </PageWrapper>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 const App = () => {
   const [showWelcome, setShowWelcome] = useState(() => {
@@ -20,20 +77,19 @@ const App = () => {
     setShowWelcome(false);
   };
 
+  useEffect(() => {
+    // Prevent browser from restoring scroll position on back
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
   return (
     <Router>
       {showWelcome ? (
         <WelcomeScreen onExplore={handleExplore} />
       ) : (
-        <PageWrapper>
-          <Routes>
-            <Route path="/" element={<HeroSection />} />
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </PageWrapper>
+        <AppRoutes />
       )}
     </Router>
   );

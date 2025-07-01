@@ -4,10 +4,9 @@
   justify-content: center;
   align-items: center;
   padding: 6rem;
-  min-height: 100lvh;
-  scroll-margin-top: 60px;
-  border-bottom: 2px solid red;
-
+  height: 100lvh;
+  position: relative;
+  display: hidden;
 }
 
 .about-left {

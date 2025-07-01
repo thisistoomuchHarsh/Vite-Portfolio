@@ -28,17 +28,6 @@ const AboutMe = () => {
         </p>
       </div>
     ),
-    skills: (
-      <div>
-        <p>
-          I specialize in crafting engaging and responsive user interfaces with
-          a strong focus on performance and usability. My expertise in modern
-          front-end technologies enables me to build seamless, interactive web
-          experiences that align with both user needs and business goals.
-        </p>
-        
-      </div>
-    ),
     education: (
       <div>
         <p>

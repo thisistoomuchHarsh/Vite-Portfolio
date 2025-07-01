@@ -19,7 +19,10 @@ html {
 body {
   font-family: Roboto;
   position: relative;
-  background: url(../src/assets/KeyboardDark.jpg) center/cover no-repeat;
+  background: url(../src/assets/KeyboardDark.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+  color: #fff;
 }
 
 body::before {
@@ -34,3 +37,13 @@ body::before {
 body::-webkit-scrollbar {
   display: none;
 }
+
+/* body{ */
+  /* background: linear-gradient(255deg, #000000, #7e01ec); */
+  /* background: linear-gradient(135deg, #0d0d0d, #8a2be2); */
+  /* background: radial-gradient(circle at center, #7e01ec, #000000); */
+  /* background: linear-gradient(135deg, #000000 75%, #5a00a0 100%); */
+
+
+
+/* } */
