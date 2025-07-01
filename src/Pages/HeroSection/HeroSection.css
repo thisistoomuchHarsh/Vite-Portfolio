@@ -1,7 +1,7 @@
 .hero-section {
   display: grid;
   gap: 10px;
-  padding: 1rem;
+  padding: 2rem;
   color: #fff;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
