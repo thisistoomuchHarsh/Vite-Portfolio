@@ -17,13 +17,15 @@ html {
 }
 
 body {
-  font-family: Roboto;
-  position: relative;
-  background: url(../src/assets/KeyboardDark.jpg);
-  background-size: contain;
+  font-family: Roboto, sans-serif;
+  background: url("../src/assets/KeyboardDark.jpg");
   background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
   color: #fff;
+  position: relative;
 }
+
 
 body::before {
   content: "";
