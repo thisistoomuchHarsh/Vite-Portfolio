@@ -16,6 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Roboto, sans-serif;
   background: url("../src/assets/KeyboardDark.jpg");
@@ -29,6 +33,7 @@ body {
 
 
 body::before {
+  height: 100%;
   content: "";
   position: absolute;
   inset: 0;

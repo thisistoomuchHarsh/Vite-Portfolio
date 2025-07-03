@@ -2,13 +2,15 @@
   max-width: 200px;
   aspect-ratio: 1/1;
     position: relative;
-    background-color: #27272c;
+    background-color: transparent;
     border-radius: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border: 2px solid #444;
+  box-shadow: 0 2px 10px rgba(216, 209, 223, 0.2);
+
   }
   
   .skill-card:hover {
