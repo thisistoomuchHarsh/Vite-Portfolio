@@ -1,18 +1,23 @@
 import "./AboutMe.css";
 import React, { useState } from "react";
-
-
-
-
+import aboutImage from "../../assets/Harsh.jpg";
+import educationImage from "../../assets/books.jpg"
+import experienceImage from "../../assets/VectorImage.jpg"
 
 const AboutMe = () => {
-  const [activeheading, setActiveheading] = useState("experience");
+  const [activeheading, setActiveheading] = useState("about");
 
   const headings = [
-    { id: "experience", label: "Experience" },
-    { id: "education", label: "Education" },
     { id: "about", label: "About Me" },
+    { id: "education", label: "Education" },
+    { id: "experience", label: "Experience" },
   ];
+
+  const images = {
+    about: aboutImage,
+    education: educationImage,
+    experience: experienceImage,
+  };
 
   const content = {
     experience: (
@@ -56,24 +61,33 @@ const AboutMe = () => {
   };
   return (
     <section id="about" className="about-section">
-      <div className="about-left">
-        {headings.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => {setActiveheading(item.id);
-              setIsMenuOpen(false);
-            }}
-            className={`menu-button ${
-              activeheading === item.id ? "active" : ""
-            }`}
-          >
-            {item.label}
-          </button>
-        ))}
-      </div>
-      <div className="about-right">
-      <h2>{headings.find(h => h.id === activeheading)?.label}</h2>
-      {content[activeheading]}
+      <div className="about-container">
+        <div className="about-left">
+          {headings.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => {
+                setActiveheading(item.id);
+                setIsMenuOpen(false);
+              }}
+              className={`menu-button ${
+                activeheading === item.id ? "active" : ""
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+        <div className="about-right">
+          <div className="about-info">
+            <h2>{headings.find((h) => h.id === activeheading)?.label}</h2>
+            {content[activeheading]}
+          </div>
+
+          <div className="about-image">
+          <img src={images[activeheading]} alt={activeheading} />
+          </div>
+        </div>
       </div>
     </section>
   );
