@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import aboutImage from "../../assets/Harsh.jpg";
 import educationImage from "../../assets/books.jpg"
 import experienceImage from "../../assets/VectorImage.jpg"
+import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
 
 const AboutMe = () => {
   const [activeheading, setActiveheading] = useState("about");
+  ScrollHashUpdater();
+
 
   const headings = [
     { id: "about", label: "About Me" },
@@ -60,7 +63,7 @@ const AboutMe = () => {
     ),
   };
   return (
-    <section id="about" className="about-section">
+    <section id="about" data-bg="light" className="about-section">
       <div className="about-container">
         <div className="about-left">
           {headings.map((item) => (
@@ -80,7 +83,6 @@ const AboutMe = () => {
         </div>
         <div className="about-right">
           <div className="about-info">
-            <h2>{headings.find((h) => h.id === activeheading)?.label}</h2>
             {content[activeheading]}
           </div>
 

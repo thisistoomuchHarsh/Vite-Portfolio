@@ -1,48 +1,26 @@
 .contact-page {
-  padding: 1rem;
+  min-height: 100vh;
+  padding: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  overflow-x: hidden;
 }
 
 .contact-container {
   width: 100%;
   height: auto;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.back {
-  position: absolute;
-  top: 37px;
-  left: 32px;
-  background: transparent;
-  border: 1px solid rgb(126, 1, 236);
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 10px;
-  border-radius: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  transition: background 1s ease;
-}
-
-.back:hover {
-  background: rgb(126, 1, 236);
+  gap: 4rem;
+  padding: 2rem;
 }
 
 .contact-heading {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .contact-section {
@@ -59,7 +37,7 @@
 
 .contact-left-container {
   background-color: transparent;
-  border: 2px solid #444;
+  border: 2px solid #777575;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(216, 209, 223, 0.2);
@@ -69,9 +47,7 @@
 }
 
 .contact-left-container h3 {
-  padding: 4px 10px;
   color: white;
-  background: rgb(126, 1, 236);
   font-size: 2rem;
   width: fit-content;
   border-radius: 8px;
@@ -102,7 +78,7 @@
 .contact-form textarea {
   background-color: transparent;
   color: #fff;
-  border: 2px solid #444;
+  border: 2px solid #777575;
   padding: 14px;
   border-radius: 6px;
   font-size: 16px;
@@ -116,7 +92,7 @@
 
 .contact-form button {
   background: transparent;
-  border: 2px solid #444;
+  border: 2px solid #777575;
   padding: 14px 26px;
   font-size: 16px;
   color: #fff;
@@ -153,7 +129,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 2px solid #444;
+  border: 2px solid #777575;
   box-shadow: 0 2px 20px rgba(216, 209, 223, 0.2);
 }
 
@@ -211,5 +187,11 @@
 
   .contact-form button {
     width: 100%;
+  }
+}
+
+@media (max-width:425px) {
+  .contact-page{
+    padding: 2rem;
   }
 }

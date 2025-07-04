@@ -4,19 +4,17 @@ import phoneIcon from "../../assets/phone.svg";
 import emailIcon from "../../assets/email.svg";
 import locationIcon from "../../assets/address.svg";
 import RotatingText from "../../Components/RotatingText/RotatingText";
-import { HiArrowLeft } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
 import AnimatedContent from "../../Components/AnimatedContent/AnimatedContent";
+import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
+
 
 const Contact = () => {
-  const navigate = useNavigate();
+  ScrollHashUpdater();
+
 
   return (
-    <section className="contact-page">
+    <section id="contact"  data-bg="dark" className="contact-page">
       <div className="contact-container">
-        <button className="back" onClick={() => navigate("/")}>
-          <HiArrowLeft />
-        </button>
         <h2 className="contact-heading">
           <RotatingText
             texts={["Contact", "Reach"]}

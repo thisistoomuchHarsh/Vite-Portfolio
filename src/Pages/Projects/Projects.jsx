@@ -1,7 +1,8 @@
 import React from "react";
 import "./Projects.css";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
+
 
 const projectsData = [
   {
@@ -22,10 +23,11 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const navigate = useNavigate();
+  ScrollHashUpdater();
+
 
   return (
-    <div className="projects-section">
+    <section id="projects"  data-bg="light" className="projects-section">
       <h2 className="projects-title">Projects</h2>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
@@ -43,10 +45,7 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
-      <button className="back-button" onClick={() => navigate("/")}>
-        Back to Home
-      </button>
-    </div>
+    </section>
   );
 };
 

@@ -1,23 +1,23 @@
-import React from "react";
 import "./Skills.css";
+import React from "react";
 import cssIcon from "../../assets/css.svg";
 import htmlIcon from "../../assets/html.svg";
 import nodeIcon from "../../assets/node.svg";
 import reactIcon from "../../assets/react.svg";
-import githubIcon from "../../assets/github.svg";
 import jsIcon from "../../assets/javascript.svg";
+import githubIcon from "../../assets/github.svg";
 import tailwindIcon from "../../assets/tailwind.svg";
 import bootstrapIcon from "../../assets/bootstrap.svg";
 
 import SkillCard from "../../Components/SkillCard/SkillCard";
-import FadeSection from "../../Components/FadeSection/FadeSection";
-import { HiArrowLeft } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
 import RotatingText from "../../Components/RotatingText/RotatingText";
 import AnimatedContent from "../../Components/AnimatedContent/AnimatedContent";
+import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
+
 
 const Skills = () => {
-  const navigate = useNavigate();
+
+  ScrollHashUpdater();
 
   const skills = [
     { icon: htmlIcon, title: "HTML" },
@@ -30,11 +30,8 @@ const Skills = () => {
     { icon: githubIcon, title: "Github" },
   ];
   return (
-      <section id="skills" className="skills-section">
+      <section id="skills" data-bg="dark" className="skills-section">
         <div className="skills-container">
-          <button className="back" onClick={() => navigate("/")}>
-            <HiArrowLeft />
-          </button>
           <div className="skills-heading">
             <h2>
               <span>My </span>
@@ -51,23 +48,11 @@ const Skills = () => {
               />
             </h2>
           </div>
-          <AnimatedContent
-            className="skills-card"
-            distance={50}
-            direction="vertical"
-            reverse={false}
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={2}
-          >
+          <div className="skills-grid">
             {skills.map((skill, index) => (
-              <SkillCard id={index} icon={skill.icon} title={skill.title} />
+              <SkillCard key={index} icon={skill.icon} title={skill.title} />
             ))}
-          </AnimatedContent>
+            </div>
         </div>
       </section>
   );

@@ -1,33 +1,21 @@
 import React from "react";
 import "./HeroSection.css";
-import { useNavigate } from "react-router-dom";
 import HeroImage from "../../assets/VectorImage.jpg";
-import { HiArrowRight } from "react-icons/hi";
 
 import Harsh_CV from "../../../public/Harsh_CV.pdf";
 import RotatingText from "../../Components/RotatingText/RotatingText";
 import { motion } from "framer-motion";
-import AnimatedContent from "../../Components/AnimatedContent/AnimatedContent";
+import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
+
 
 const HeroSection = () => {
-  const navigate = useNavigate();
+
+  ScrollHashUpdater();
 
   return (
-    <div className="hero-section">
-      <AnimatedContent
-        className="item hero"
-        distance={150}
-        direction="vertical"
-        reverse={true}
-        duration={1.2}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1.1}
-        threshold={0.2}
-        delay={1}
-      >
-        <motion.div className="hero-left">
+    <section id="home" data-bg="dark" className="hero-section">
+      <div className="hero">
+        <div className="hero-left">
           <h1>
             <RotatingText
               texts={["Frontend", "React.js"]}
@@ -103,110 +91,12 @@ const HeroSection = () => {
               </motion.a>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
         <motion.div className="hero-right">
           <img src={HeroImage} alt="HomePage Character" />
         </motion.div>
-      </AnimatedContent>
-      <AnimatedContent
-        className="item about"
-        distance={150}
-        direction="horizontal"
-        reverse={true}
-        duration={1.2}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1.1}
-        threshold={0.2}
-        delay={1}
-      >
-        <h2>
-          Hi, I'm <span className="about-username"> Harsh Chauhan</span>
-        </h2>
-        <p>
-          I transform visions into interactive web realities. I specialize in
-          building user-centric interfaces with a keen eye for detail and modern
-          standards.{" "}
-        </p>
-        <button onClick={() => navigate("/about")}>
-          <HiArrowRight />
-        </button>
-      </AnimatedContent>
-      <AnimatedContent
-        className="item skills"
-        distance={150}
-        direction="horizontal"
-        reverse={false}
-        duration={1.2}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1.1}
-        threshold={0.2}
-        delay={1}
-      >
-        <h2>
-          Explore <span>My Skills</span>
-        </h2>
-        <p>
-          Explore a comprehensive breakdown of my technical proficiencies,
-          including frontend languages, frameworks, tools, and methodologies.
-        </p>
-        <button onClick={() => navigate("/skills")}>
-          <HiArrowRight />
-        </button>
-      </AnimatedContent>
-      <AnimatedContent
-        className="item projects"
-        distance={150}
-        direction="horizontal"
-        reverse={true}
-        duration={1.2}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1.1}
-        threshold={0.2}
-        delay={1}
-      >
-        <h2>
-          Projects in <span>Focus</span>
-        </h2>
-        <p>
-          Discover my complete body of work, where every project is crafted with
-          attention to detail and a commitment to transforming ideas into
-          functional, creative web solutions.
-        </p>
-        <button onClick={() => navigate("/projects")}>
-          <HiArrowRight />
-        </button>
-      </AnimatedContent>
-      <AnimatedContent
-        className="item contact"
-        distance={150}
-        direction="horizontal"
-        reverse={false}
-        duration={1.2}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1.1}
-        threshold={0.2}
-        delay={1}
-      >
-        <h2>
-          Reach Out to <span> Me</span>
-        </h2>
-        <p>
-          Always open to new collaborations, job opportunities, and interesting
-          conversations in the world of web development. Drop me a line!
-        </p>
-        <button onClick={() => navigate("/contact")}>
-          <HiArrowRight />
-        </button>
-      </AnimatedContent>
-    </div>
+      </div>
+    </section>
   );
 };
 

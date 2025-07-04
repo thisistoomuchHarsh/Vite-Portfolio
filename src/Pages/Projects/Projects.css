@@ -1,10 +1,7 @@
 .projects-section {
-  height: 100lvh;
-  padding: 2rem;
-  background-color: #1a1a1a;
-  color: #fff;
-  position: relative;
-
+  min-height: 100vh;
+  padding: 5rem;
+  background-color: #ffffff;
 }
 
 .projects-title {
@@ -59,4 +56,10 @@
 
 .back-button:hover {
   background-color: #6f1eae;
+}
+
+@media (max-width:425px) {
+  .projects-section{
+    padding: 2rem;
+  }
 }

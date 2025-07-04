@@ -7,51 +7,13 @@
   box-sizing: border-box;
 }
 
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 body {
   font-family: Roboto, sans-serif;
-  background: url("../src/assets/KeyboardDark.jpg");
-  background-repeat: repeat;
-  background-size: contain;
-  background-attachment: fixed;
-  color: #fff;
-  position: relative;
+  color: #ffffff;
+  background-color: #182e36;
   overflow-x: hidden;
 }
-
-
-body::before {
-  height: 100%;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-  z-index: 0;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* body{ */
-  /* background: linear-gradient(255deg, #000000, #7e01ec); */
-  /* background: linear-gradient(135deg, #0d0d0d, #8a2be2); */
-  /* background: radial-gradient(circle at center, #7e01ec, #000000); */
-  /* background: linear-gradient(135deg, #000000 75%, #5a00a0 100%); */
-
-
-
-/* } */
