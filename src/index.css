@@ -17,3 +17,7 @@ body {
   background-color: #182e36;
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
