@@ -14,7 +14,7 @@ const useScrollHashUpdater = () => {
         });
       },
       {
-        threshold: 1, // 60% in view to trigger
+        threshold: 0.8,
       }
     );
 

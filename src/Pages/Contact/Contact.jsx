@@ -4,16 +4,13 @@ import phoneIcon from "../../assets/phone.svg";
 import emailIcon from "../../assets/email.svg";
 import locationIcon from "../../assets/address.svg";
 import RotatingText from "../../Components/RotatingText/RotatingText";
-import AnimatedContent from "../../Components/AnimatedContent/AnimatedContent";
 import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
-
 
 const Contact = () => {
   ScrollHashUpdater();
 
-
   return (
-    <section id="contact"  data-bg="dark" className="contact-page">
+    <section id="contact" data-bg="dark" className="contact-page">
       <div className="contact-container">
         <h2 className="contact-heading">
           <RotatingText
@@ -32,23 +29,11 @@ const Contact = () => {
 
         <div className="contact-section">
           {/* Left Form */}
-          <AnimatedContent
-            className="contact-left"
-            direction="horizontal"
-            reverse
-            distance={150}
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={1}
-          >
+          <div className="contact-left">
             <div className="contact-left-container">
               <h3>Let's Work Together</h3>
               <p>Reach out to me for collaborations or inquiries.</p>
-              <form className="contact-form">
+              <form className="contact-form" name="contact">
                 <div className="input-row">
                   <input type="text" placeholder="First Name" />
                   <input type="text" placeholder="Last Name" />
@@ -61,43 +46,38 @@ const Contact = () => {
                 <button type="submit">Send Message</button>
               </form>
             </div>
-          </AnimatedContent>
+          </div>
 
           {/* Right Info */}
-          <AnimatedContent
-            className="contact-right"
-            direction="horizontal"
-            distance={150}
-            duration={1.2}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={1}
-          >
+          <div className="contact-right">
             <div className="contacts">
-              <div className="contact-logo"><img src={phoneIcon} alt="Phone" /></div>
+              <div className="contact-logo">
+                <img src={phoneIcon} alt="Phone" />
+              </div>
               <div className="contact-details">
                 <p>Phone</p>
                 <p>7703949916</p>
               </div>
             </div>
             <div className="contacts">
-              <div className="contact-logo"><img src={emailIcon} alt="Email" /></div>
+              <div className="contact-logo">
+                <img src={emailIcon} alt="Email" />
+              </div>
               <div className="contact-details">
                 <p>Email</p>
                 <p>chauhanharsh388@gmail.com</p>
               </div>
             </div>
             <div className="contacts">
-              <div className="contact-logo"><img src={locationIcon} alt="Location" /></div>
+              <div className="contact-logo">
+                <img src={locationIcon} alt="Location" />
+              </div>
               <div className="contact-details">
                 <p>Address</p>
                 <p>Delhi, India</p>
               </div>
             </div>
-          </AnimatedContent>
+          </div>
         </div>
       </div>
     </section>

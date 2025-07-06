@@ -5,48 +5,30 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1.5rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 24px rgba(114, 113, 113, 0.8);
-  color: #fff;
-}
+  padding: 1.2rem 2rem;
 
-.navbar.dark-text {
-  color: #182e36;
-}
+  /* Base tone with transparency */
+  background: rgba(24, 46, 54, 0.75); /* <-- your color with 75% opacity */
 
-.navbar.dark-text .nav-right ul li a {
-  color: #999999;
-}
+  /* Glass effect */
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
 
-.navbar.dark-text .nav-right ul li a:hover {
-  color: #182e36;
-}
+  /* Border and shadow for depth */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 
-.navbar.dark-text .hamburger div {
-  background: #182e36;
-}
-
-.navbar.light-text {
-  color: #ffffff; /* White text */
-}
-
-.navbar.light-text .nav-right ul li a {
   color: #ffffff;
 }
 
-.navbar.light-text .nav-right ul li a:hover {
-  color: #ffffff;
-}
 
-.navbar.light-text .hamburger div {
-  background: #ffffff;
-}
+/* Removed dynamic light/dark classes */
 
+/* Text and Links */
 .nav-left h2 {
   font-size: 1.2rem;
   letter-spacing: 1.2px;
+  color: #ffffff;
 }
 
 .nav-right {
@@ -73,12 +55,15 @@
 .nav-right ul li a {
   text-decoration: none;
   font-weight: 550;
+  color: #ffffff;
+  transition: color 0.2s ease;
 }
 
 .nav-right ul li a:hover {
-  color: #fff;
+  color: #cccccc;
 }
 
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -90,9 +75,31 @@
 .hamburger div {
   width: 25px;
   height: 3px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 2px;
 }
+
+/* Base nav link styling */
+.nav-right ul li a {
+  text-decoration: none;
+  font-weight: 550;
+  color: #ffffff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+
+.nav-right ul li a.active-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #882f84;
+  border-radius: 4px;
+}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -102,8 +109,8 @@
     right: 10px;
     flex-direction: column;
     gap: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem 2rem;
     border-radius: 15px;
     display: none;

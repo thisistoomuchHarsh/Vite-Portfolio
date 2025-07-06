@@ -11,12 +11,9 @@ import bootstrapIcon from "../../assets/bootstrap.svg";
 
 import SkillCard from "../../Components/SkillCard/SkillCard";
 import RotatingText from "../../Components/RotatingText/RotatingText";
-import AnimatedContent from "../../Components/AnimatedContent/AnimatedContent";
 import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
 
-
 const Skills = () => {
-
   ScrollHashUpdater();
 
   const skills = [
@@ -30,31 +27,35 @@ const Skills = () => {
     { icon: githubIcon, title: "Github" },
   ];
   return (
-      <section id="skills" data-bg="dark" className="skills-section">
-        <div className="skills-container">
-          <div className="skills-heading">
-            <h2>
-              <span>My </span>
-              <RotatingText
-                texts={["Skills", "Tech Stack"]}
-                mainClassName="rotating-text-wrapper"
-                staggerFrom={"last"}
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-120%" }}
-                staggerDuration={0.025}
-                transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                rotationInterval={2000}
-              />
-            </h2>
-          </div>
-          <div className="skills-grid">
-            {skills.map((skill, index) => (
-              <SkillCard key={index} icon={skill.icon} title={skill.title} />
-            ))}
-            </div>
+    <section id="skills" data-bg="dark" className="skills-section">
+      <div className="skills-container">
+        <div className="skills-heading">
+          <h2>
+            <span>My </span>
+            <RotatingText
+              texts={["Skills", "Tech Stack"]}
+              mainClassName="rotating-text-wrapper"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2000}
+            />
+          </h2>
         </div>
-      </section>
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <SkillCard
+              key={index}
+              icon={skill.icon}
+              title={skill.title}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

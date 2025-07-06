@@ -7,13 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
   border: 2px solid ;
-  box-shadow: 0 2px 10px rgba(216, 209, 223, 0.2);
-}
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
-.skill-card:hover {
-  transform: scale(1.05);
 }
 
 .skill-icon {

@@ -1,6 +1,6 @@
 import "./WelcomeScreen.css";
-import BlurText from "../BlurText/BlurText";
-import AnimatedContent from "../AnimatedContent/AnimatedContent";
+import BlurText from "../../Components/BlurText/BlurText";
+import AnimatedContent from "../../Components/AnimatedContent/AnimatedContent";
 
 const WelcomeScreen = ({ onExplore }) => {
   return (
