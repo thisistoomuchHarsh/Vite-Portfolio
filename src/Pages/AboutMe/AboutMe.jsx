@@ -1,5 +1,6 @@
 import "./AboutMe.css";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import aboutImage from "../../assets/Harsh.jpg";
 import educationImage from "../../assets/books.jpg"
 import experienceImage from "../../assets/VectorImage.jpg"
@@ -63,7 +64,11 @@ const AboutMe = () => {
     ),
   };
   return (
-    <section id="about" data-bg="light" className="about-section">
+    <motion.section id="about" className="about-section"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  viewport={{ once: true, amount: 0.3 }}>
       <div className="about-container">
         <div className="about-left">
           {headings.map((item) => (
@@ -91,7 +96,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
 import "./Navbar.css";
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,7 +26,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar">
+    <motion.div
+    className="navbar"
+    initial={{ opacity: 0, y: -40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
       <div className="nav-left">
         <h2>HARSH CHAUHAN</h2>
       </div>
@@ -42,7 +49,7 @@ const Navbar = () => {
           <li><a href="#contact" className={activeHash === "#contact" ? "active-link" : ""}>Contact</a></li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

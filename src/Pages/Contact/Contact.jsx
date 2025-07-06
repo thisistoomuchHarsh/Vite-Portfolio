@@ -1,5 +1,6 @@
-import React from "react";
 import "./Contact.css";
+import React from "react";
+import { motion } from "framer-motion";
 import phoneIcon from "../../assets/phone.svg";
 import emailIcon from "../../assets/email.svg";
 import locationIcon from "../../assets/address.svg";
@@ -10,7 +11,12 @@ const Contact = () => {
   ScrollHashUpdater();
 
   return (
-    <section id="contact" data-bg="dark" className="contact-page">
+    <motion.section id="contact" className="contact-page"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  viewport={{ once: true, amount: 0.3 }}
+>
       <div className="contact-container">
         <h2 className="contact-heading">
           <RotatingText
@@ -80,7 +86,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

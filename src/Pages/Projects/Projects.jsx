@@ -27,7 +27,11 @@ const Projects = () => {
 
 
   return (
-    <section id="projects"  data-bg="light" className="projects-section">
+    <motion.section id="projects"  className="projects-section"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true, amount: 0.3 }}>
       <h2 className="projects-title">Projects</h2>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
@@ -45,7 +49,7 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,5 +1,6 @@
 import "./Skills.css";
 import React from "react";
+import { motion } from "framer-motion";
 import cssIcon from "../../assets/css.svg";
 import htmlIcon from "../../assets/html.svg";
 import nodeIcon from "../../assets/node.svg";
@@ -27,7 +28,11 @@ const Skills = () => {
     { icon: githubIcon, title: "Github" },
   ];
   return (
-    <section id="skills" data-bg="dark" className="skills-section">
+    <motion.section id="skills" className="skills-section"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true, amount: 0.3 }}>
       <div className="skills-container">
         <div className="skills-heading">
           <h2>
@@ -55,7 +60,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

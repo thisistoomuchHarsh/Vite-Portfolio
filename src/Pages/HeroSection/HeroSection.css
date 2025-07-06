@@ -1,5 +1,6 @@
 .hero-section {
   padding: 5rem;
+  position: relative;
 }
 
 .hero {
@@ -97,6 +98,23 @@
   height: 100%;
   border-radius: 14px;
 }
+
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+  z-index: 10;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.scroll-down-arrow:hover {
+  color: #ffffff;
+}
+
 
 
 @media (max-width:768px){
