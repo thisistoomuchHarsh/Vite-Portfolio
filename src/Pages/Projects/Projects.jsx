@@ -46,13 +46,11 @@ const Projects = () => {
             className="project-card"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300 }}
+            onClick={() => window.open(project.link, "_blank")}
           >
             <img src={project.image} alt="Project Image" />
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <button onClick={() => window.open(project.link, "_blank")}>
-              View Live
-            </button>
           </motion.div>
         ))}
       </div>

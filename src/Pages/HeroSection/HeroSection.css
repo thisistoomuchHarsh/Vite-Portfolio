@@ -37,8 +37,8 @@
 
 .toggles .resume {
   padding: 7px 20px;
-  background-color: #882f84;
-  border: none;
+  border: 2px solid #777575;
+  background-color: transparent;
   border-radius: 30px;
   cursor: pointer;
   font-size: 1.1rem;
@@ -50,8 +50,8 @@
 }
 
 .toggles .resume:hover {
-  background-color: #ffffff;
-  color: #182e36;
+  background-color: #882f84;
+  color: #ffffff;
 }
 
 .social-buttons {
@@ -67,17 +67,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  border: 2px solid #777575;
   color: #fff;
-  background-color: #882f84;
-  border: none;
   text-align: center;
   cursor: pointer;
   font-size: 1.1rem;
   transition: 0.5s ease-in-out;
+  background-color: transparent;
 }
 .toggles .socials:hover {
-  background-color: #ffffff;
-  color: #182e36;
+  background-color: #882f84;
+  color: #ffffff;
 }
 
 .toggles .socials i {
