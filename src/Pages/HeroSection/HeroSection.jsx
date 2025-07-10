@@ -2,7 +2,7 @@ import React from "react";
 import "./HeroSection.css";
 import HeroImage from "../../assets/VectorImage.jpg";
 
-import Harsh_CV from "../../../public/Harsh_CV.pdf";
+import Harsh_CV from "../../../public/HarshChauhanCV.pdf";
 import RotatingText from "../../Components/RotatingText/RotatingText";
 import { motion } from "framer-motion";
 import ScrollHashUpdater from "../../Components/ScrollHashUpdater/ScrollHashUpdater";
